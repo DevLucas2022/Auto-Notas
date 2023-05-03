@@ -9,37 +9,37 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
     @GetMapping("/")
-    public String teste(){
-        return "erro";
+    public String home(){
+        return "home";
     }
     @GetMapping("/{rota}")
     public String rotas(@PathVariable String rota) {
         switch(rota){
             case "login":
-                return login(rota);
+                return login();
             case "cadastro":
-                return cadastro(rota);
+                return cadastro();
             case "principalProfessor":
-                return principalProfessor(rota);
+                return principalProfessor();
             case "principalAluno":
-                return principalAluno(rota);
+                return principalAluno();
             default:
-                return error(rota);
+                return error();
         }
     }
-    public String login(String t){
+    public String login(){
         return "login";
     }
-    public String cadastro(String t) {
+    public String cadastro() {
         return "cadastro";
     }
-    public  String principalProfessor(String t){
+    public  String principalProfessor(){
         return "principalProfessor";
     }
-    public String principalAluno(String t){
+    public String principalAluno(){
         return "principalAluno";
     }
-    public String error(String t) {
+    public String error() {
         return "erro";
     }
 }
