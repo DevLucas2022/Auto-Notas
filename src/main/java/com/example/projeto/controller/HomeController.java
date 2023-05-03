@@ -1,7 +1,6 @@
 package com.example.projeto.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,52 +8,38 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/")
 public class HomeController {
-    @GetMapping("/{nomeDep}")
-    public String departamento(@PathVariable String nomeDep, ModelMap model) {
-        model.addAttribute("nome", nomeDep);
-        switch(nomeDep){
-            case "livro":
-                mainHome(nomeDep);
-                break;
+    @GetMapping("/")
+    public String teste(){
+        return "erro";
+    }
+    @GetMapping("/{rota}")
+    public String rotas(@PathVariable String rota) {
+        switch(rota){
             case "login":
-                login(nomeDep);
-                break;
-            case "dashboard":
-                dashboard(nomeDep);
-                break;
-
-
-        }
-//        if(nomeDep == "livro"){
-//            deps(nomeDep);
-        return nomeDep;
-        }
-
-
-
-    @GetMapping
-    public String mainHome(String t){
-        if(t == "livro"){
-            return "livro";
-        }else{
-            return "home";
+                return login(rota);
+            case "cadastro":
+                return cadastro(rota);
+            case "principalProfessor":
+                return principalProfessor(rota);
+            case "principalAluno":
+                return principalAluno(rota);
+            default:
+                return error(rota);
         }
     }
-
     public String login(String t){
-        if(t == "login"){
-            return "login";
-        }else{
-            return "home";
-        }
+        return "login";
     }
-
-    public String dashboard(String t){
-        if(t == "login"){
-            return "dashboard";
-        }else{
-            return "home";
-        }
+    public String cadastro(String t) {
+        return "cadastro";
+    }
+    public  String principalProfessor(String t){
+        return "principalProfessor";
+    }
+    public String principalAluno(String t){
+        return "principalAluno";
+    }
+    public String error(String t) {
+        return "erro";
     }
 }
-
