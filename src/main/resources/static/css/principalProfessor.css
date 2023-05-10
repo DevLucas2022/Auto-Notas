@@ -1,0 +1,8 @@
+#div1 {
+    display: flex;
+}
+table {
+    margin-right: 5px;
+    border: 0.5px solid #000;
+    max-width: 50%;
+}
