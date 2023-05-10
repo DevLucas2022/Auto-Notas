@@ -1,45 +1,44 @@
 package com.example.projeto.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/")
 public class HomeController {
     @GetMapping("/")
-    public String home(){
+    public String home(ModelMap model) {
+        model.addAttribute("home","home");
         return "home";
     }
-    @GetMapping("/{rota}")
-    public String rotas(@PathVariable String rota) {
-        switch(rota){
-            case "login":
-                return login();
-            case "cadastro":
-                return cadastro();
-            case "principalProfessor":
-                return principalProfessor();
-            case "principalAluno":
-                return principalAluno();
-            default:
-                return error();
-        }
-    }
-    public String login(){
+
+    @GetMapping("/login")
+    public String login(ModelMap model) {
+        model.addAttribute("login","login");
         return "login";
     }
-    public String cadastro() {
+
+    @GetMapping("/cadastro")
+    public String cadastro(ModelMap model) {
+        model.addAttribute("cadastro","cadastro");
         return "cadastro";
     }
-    public  String principalProfessor(){
+
+    @GetMapping("/principalProfessor")
+    public String principalProfessor(ModelMap model) {
+        model.addAttribute("principalProfessor","principalProfessor");
         return "principalProfessor";
-    }
-    public String principalAluno(){
+}
+@GetMapping("/principalAluno")
+    public String principalAluno(ModelMap model) {
+        model.addAttribute("principalAluno","principalAluno");
         return "principalAluno";
-    }
-    public String error() {
-        return "erro";
-    }
+}
+@GetMapping("/quemSomos")
+    public String quemsomos(ModelMap model) {
+        model.addAttribute("quemSomos","quemSomos");
+        return "quemSomos";
+}
 }
