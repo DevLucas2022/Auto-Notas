@@ -3778,6 +3778,24 @@ textarea.form-control-lg {
   color: var(--bs-navbar-brand-hover-color);
 }
 
+.navbar-sobre{
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: gray;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar-sobre {
+    transition: none;
+  }
+}
+.navbar-sobre:hover, .nav-link:focus {
+  color: #ffffff98;
+}
+
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-padding-y: 0.5rem;
