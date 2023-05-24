@@ -487,6 +487,7 @@ progress {
 }
 
 .lead {
+  
   font-size: 1.25rem;
   font-weight: 300;
 }
@@ -10866,7 +10867,7 @@ section {
 
 .containerCard {
   width: 1150px;
-  padding: 20px;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10914,4 +10915,7 @@ section {
 }
 .container .card:houver .content p {
   color: white;
+}
+.titulo {
+  text-align: center;
 }
