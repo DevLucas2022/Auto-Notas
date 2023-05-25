@@ -1,13 +1,55 @@
-
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="<http://www.thymeleaf.org>">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org>">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring Boot - Index</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <title>Cadastro</title>
 </head>
 <body>
-<h1>Cadastro</h1>
+
+<button class="btn-sair"><i class="fas fa-sign-out-alt"></i> Sair</button>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Faça o seu Cadastro</h1>
+                <br>
+                <input type="text" placeholder="Nome" />
+                <input type="text" placeholder="Registro" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <br>
+                <button>Cadastre-se</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Entrar</h1>
+                <br>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <a href="#">Esqueceu sua senha?</a>
+                <button>Login</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem-Vindo!</h1>
+                    <p>Para utilizar o software AutoNotas, é necessário realizar o cadastro previamente, fornecendo algumas informações pessoais.</p>
+                    <button class="ghost" id="signIn">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Olá!</h1>
+                    <p>Ensira os seus dados pessoais e comece usufruir do software AutoNotas!</p>
+                    <button class="ghost" id="signUp">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/src/main/resources/static/scripts/cadastro.js"></script>
 </body>
 </html>
