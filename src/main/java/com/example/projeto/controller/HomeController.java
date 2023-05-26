@@ -4,6 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import br.com.meubuscadordecep.dominio.Endereco;
+import br.com.meubuscadordecep.viacep.ServicoDeCep;
+
+
 
 @Controller
 @RequestMapping("/")
@@ -33,12 +37,81 @@ public class HomeController {
 }
 @GetMapping("/principalAluno")
     public String principalAluno(ModelMap model) {
+        model.addAttribute("dbFields", new HomeController());
         model.addAttribute("principalAluno","principalAluno");
         return "principalAluno";
 }
-@GetMapping("/quemSomos")
-    public String quemsomos(ModelMap model) {
-        model.addAttribute("quemSomos","quemSomos");
-        return "quemSomos";
+public String obterInstituicao(String id){
+        try{
+        Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+        return endereco.getInstituicao();
+}catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
 }
-}
+    public String obterDisciplina(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getDisciplina();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+    public String obterRa(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getRa();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+    public String obterNome(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getNome();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+    public String obterP1(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getP1();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+    public String obterP2(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getP2();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+    public String obterATV(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getAtv();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+    public String obterMedia(String id){
+        try{
+            Endereco endereco = ServicoDeCep.buscaEnderecoPelo(id);
+            return endereco.getMedia();
+        }catch (Exception e) {
+            e.printStackTrace();
+            return "Erro ao obter o valor";
+        }
+    }
+
+};
