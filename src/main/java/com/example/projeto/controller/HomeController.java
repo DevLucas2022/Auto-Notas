@@ -14,10 +14,10 @@ public class HomeController {
         return "home";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/loginAluno")
     public String login(ModelMap model) {
-        model.addAttribute("login","login");
-        return "login";
+        model.addAttribute("loginAluno","loginAluno");
+        return "loginAluno";
     }
 
     @GetMapping("/cadastro")
