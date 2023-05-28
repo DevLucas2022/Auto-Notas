@@ -9,12 +9,13 @@
   <title>Cadastro</title>
 </head>
 <body>
-
-<button class="btn-sair"><i class="fas fa-sign-out-alt"></i><a style="color: white;" th:href="@{/}">Sair</a></button>
+    <form th:action="@{/}" method="get">
+        <button class="btn-sair"><i class="fas fa-sign-out-alt"></i>Sair</a></button>
+    </form>
 
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form th:action="@{/loginProfessor}">
                 <h1>Faça o seu Cadastro</h1>
                 <br>
                 <input type="text" placeholder="Nome" />
@@ -22,17 +23,17 @@
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Senha" />
                 <br>
-                <button><a style="color:white;" th:href="@{/cadastro}">Cadastre-se</a></button>
+                <button>Cadastre-se</button>
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form th:action="@{/principalProfessor}">
                 <h1>Entrar</h1>
                 <br>
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Senha" />
                 <a href="#">Esqueceu sua senha?</a>
-                <button><a style="color:white;" th:href="@{/principalProfessor}">Login</a></button>
+                <button>Login</button>
             </form>
         </div>
         <div class="overlay-container">

@@ -9,16 +9,17 @@
   <title>Cadastro</title>
 </head>
 <body>
-
-<button class="btn-sair"><i class="fas fa-sign-out-alt"></i> Sair</button>
-
+    <form th:action="@{/}" method="get">
+        <button class="btn-sair"><i class="fas fa-sign-out-alt"></i> Sair</button>
+    </form>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form th:action="@{/principalAluno}" method="get">
                 <h1>Aluno</h1>
                 <br>
                 <input type="text" placeholder="RA" />
-                <button>Consultar</button>
+                <!-- <button>Consultar</button> -->
+                <button type="submit" class="btn btn-primary">Consultar</button>
             </form>
         </div>
         <div class="overlay-container">

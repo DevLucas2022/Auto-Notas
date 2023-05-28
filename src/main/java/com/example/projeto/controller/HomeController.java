@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
     @GetMapping("/")
     public String home(ModelMap model) {
-        model.addAttribute("home","home");
-        return "home";
+        model.addAttribute("index","index");
+        return "index";
     }
 
     @GetMapping("/loginAluno")
@@ -20,31 +20,31 @@ public class HomeController {
         return "loginAluno";
     }
 
-    @GetMapping("/cadastro")
+    @GetMapping("/loginProfessor")
     public String cadastro(ModelMap model) {
-        model.addAttribute("cadastro","cadastro");
-        return "cadastro";
+        model.addAttribute("loginProfessor","loginProfessor");
+        return "loginProfessor";
     }
 
     @GetMapping("/principalProfessor")
     public String principalProfessor(ModelMap model) {
         model.addAttribute("principalProfessor","principalProfessor");
         return "principalProfessor";
-}
-@GetMapping("/principalAluno")
-    public String principalAluno(ModelMap model) {
-        model.addAttribute("principalAluno","principalAluno");
-        return "principalAluno";
-}
-@GetMapping("/quemSomos")
-    public String quemsomos(ModelMap model) {
-        model.addAttribute("quemSomos","quemSomos");
-        return "quemSomos";
-}
+    }
+    @GetMapping("/principalAluno")
+        public String principalAluno(ModelMap model) {
+            model.addAttribute("principalAluno","principalAluno");
+            return "principalAluno";
+    }
+    @GetMapping("/principalProfessor/editarNotas")
+        public String quemsomos(ModelMap model) {
+            model.addAttribute("editarNotas","editarNotas");
+            return "editarNotas";
+    }
 
-@GetMapping("/sala")
-    public String sala(ModelMap model) {
-        model.addAttribute("sala","sala");
-        return "sala";
-}
+    @GetMapping("/principalProfessor/criarSala")
+    public String criarSala(ModelMap model) {
+        model.addAttribute("criarSala","criarSala");
+        return "criarSala";
+    }
 }
