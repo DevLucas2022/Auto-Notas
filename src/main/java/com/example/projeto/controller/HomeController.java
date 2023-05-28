@@ -41,4 +41,10 @@ public class HomeController {
         model.addAttribute("quemSomos","quemSomos");
         return "quemSomos";
 }
+
+@GetMapping("/sala")
+    public String sala(ModelMap model) {
+        model.addAttribute("sala","sala");
+        return "sala";
+}
 }
