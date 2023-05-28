@@ -27,24 +27,19 @@ body {
     background-color: black !important;
 }
 
-.bloco {
-    display: flex;
-    margin-left: 150px;
-    margin-top: 13%;
-}
-
 .tabela {
     flex: none;
-    margin-right: 520px; /* Espaçamento opcional entre as tabelas */
+    margin-left: 22%;
+    margin-top: 13%;
 }
   
 .tabela:last-child {
-    margin-right: 0%; /* Remove o espaçamento da última tabela */
+    margin-right: 0%; 
 }
 
 table {
     position: absolute;
-    width: 500px;
+    max-width: 750px;
     height: 350px;
     border: 5.5px solid black;
     border-spacing: 0rem;
@@ -55,11 +50,6 @@ table {
 
 table thead{
     background-color: black;
-}
-
-table tfoot{
-    background-color: black;
-    text-align: end;
 }
 
 table tbody{
@@ -74,6 +64,7 @@ table thead tr th{
     border: 0 solid rgb(0, 0, 0);
     border-bottom-width: 1px;
     border-right-width: 1px;
+    width: 105px !important;
 }
 
 table thead tr th:last-child{
@@ -85,6 +76,7 @@ table tbody tr td{
     border: 0 solid rgb(0, 0, 0); 
     border-bottom-width: 1px;
     border-right-width: 1px;
+    width: 115px !important;
 }
 
 .btn-adicionar {

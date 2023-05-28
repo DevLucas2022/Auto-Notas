@@ -1,13 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="<http://www.thymeleaf.org>">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring Boot - Index</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/principalAluno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
 </head>
 <body>
-<h1>Pagina Aluno</h1>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+        <div class="container px-4">
+            <a class="navbar-brand" href="#">AutoNotas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" th:href="@{/}">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+        <div class="tabela">
+          <table>
+            <thead>
+                <tr>
+                    <th colspan="7">Aluno </th>
+                </tr>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Instituição</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">P1</th>
+                    <th scope="col">P2</th>
+                    <th scope="col">ATV</th>
+                    <th scope="col">Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="outros">Felipe Soares</td>
+                    <td class="outros">E.E Sylvia Ramos Esquivel</td>
+                    <td class="outros">Desenvolvimento de Software Multiplataformas</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.75</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.9</td>
+                </tr>
+                <tr>
+                    <td class="outros">2</td>
+                    <td class="outros">2</td>
+                    <td class="outros">2</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.75</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.9</td>
+                </tr>
+                <tr>
+                    <td class="outros">3</td>
+                    <td class="outros">3</td>
+                    <td class="outros">3</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.75</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.9</td>
+                </tr>
+                <tr>
+                    <td class="outros">4</td>
+                    <td class="outros">Larry</td>
+                    <td class="outros">Larry</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.75</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.9</td>
+                </tr>
+                <tr>
+                    <td class="outros">5</td>
+                    <td class="outros">Larry</td>
+                    <td class="outros">the Bird</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.75</td>
+                    <td class="notas">8</td>
+                    <td class="notas">8.9</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 </body>
 </html>
