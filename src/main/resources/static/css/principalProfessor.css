@@ -96,6 +96,17 @@ table tbody tr td{
     font-size: 14px;
     cursor: pointer;
   }
+
+  .btn-editar {
+    background: #1a51c7 !important; 
+    /* background-color: #0c4d0c; */
+    color: #ffffff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
   
   .btn-adicionar i {
     margin-right: 2px;

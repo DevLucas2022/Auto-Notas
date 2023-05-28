@@ -66,7 +66,14 @@
                 </tr>
             </tbody>
             <tfoot>
-                <td colspan="6" ><a href=""> <button class="btn-adicionar"><i class="fas fa-plus"></i> Adicionar</button></a></td>
+                <form th:action="@{/principalProfessor/editarNotas}" method="get">
+                    <td colspan="1" style="display: flex; justify-content: left;">
+                        <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                    </td>
+                </form>
+                <form th:action="@{/principalProfessor/criarSala}">
+                    <td colspan="6"><button class="btn-adicionar"><i class="fas fa-plus"></i> Nova</button></td>
+                </form>
             </tfoot>
           </table>
         </div>
@@ -130,7 +137,16 @@
                 </tr>
             </tbody>
             <tfoot>
-                <td colspan="6" ><a href=""><button class="btn-adicionar"><i class="fas fa-plus"></i> Adicionar</button></a></td>
+                <form th:action="@{/principalProfessor/editarNotas}" method="get">
+                    <td colspan="1" style="display: flex; justify-content: left;">
+                        <button class="btn-editar"><i class="fas fa-edit"></i> Editar</button>
+                    </td>
+                </form>
+                <form th:action="@{/principalProfessor/adicionarAluno}" method="get">
+                    <td colspan="6">
+                        <button class="btn-adicionar"><i class="fas fa-plus"></i> Adicionar</button>
+                    </td>
+                </form>
             </tfoot>
           </table>
         </div>
