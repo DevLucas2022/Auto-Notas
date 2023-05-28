@@ -42,7 +42,7 @@ body {
     margin-right: 0%; /* Remove o espaçamento da última tabela */
 }
 
-table {
+table#tableSizeAluno {
     position: absolute;
     width: 500px;
     height: 350px;
@@ -53,6 +53,16 @@ table {
     background-color: #fff;
 } 
 
+#tableSize{
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    border: 5.5px solid black;
+    border-spacing: 0rem;
+    border-collapse: collapse;
+    border-radius: 500px;
+    background-color: #fff;
+}
 table thead{
     background-color: black;
 }

@@ -12,14 +12,14 @@
     <div class="container mt-5 mb-5 d-flex justify-content-center">
         <div class="card px-1 py-4">
             <div class="card-body">
-                <h2 class="card-title mb-3">Editar Notas</h2><br>
+                <h2 class="card-title mb-3">Editar salas</h2><br>
 
                 <form th:action="@{/principalProfessor}">
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <div class="input-group"> 
-                                    <input class="form-control" type="text" placeholder="Digite o RA"> 
+                                    <input class="form-control" type="text" placeholder="ID da Instituição"> 
                                 </div>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <div class="input-group"> 
-                                    <input class="form-control" type="text" placeholder="Nota da Prova 1"> 
+                                    <input class="form-control" type="text" placeholder="Nome da disciplina"> 
                                 </div>
                             </div>
                         </div>
@@ -39,22 +39,11 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <div class="input-group"> 
-                                    <input class="form-control" type="text" placeholder="Nota da Prova 2"> 
+                                    <input class="form-control" type="text" placeholder="Nome da Instituição"> 
                                 </div>
                             </div>
                         </div>
                     </div>
-    
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group">
-                                <div class="input-group"> 
-                                    <input class="form-control" type="text" placeholder="Notas das Atividades"> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <button type="submit" class="btn">Salvar</button>
             </form>
         </div>

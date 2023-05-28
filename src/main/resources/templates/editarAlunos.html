@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org>">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/editarNotas.css">
+  <title>Editar Notas</title>
+</head>
+<body>
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+        <div class="card px-1 py-4">
+            <div class="card-body">
+                <h2 class="card-title mb-3">Editar alunos</h2><br>
+
+                <form th:action="@{/principalProfessor}">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> 
+                                    <input class="form-control" type="text" placeholder="Digite o RA"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> 
+                                    <input class="form-control" type="text" placeholder="Nota da Prova 1"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> 
+                                    <input class="form-control" type="text" placeholder="Nota da Prova 2"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> 
+                                    <input class="form-control" type="text" placeholder="Notas das Atividades"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <div class="input-group"> 
+                                    <input class="form-control" type="text" placeholder="Média final"> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
